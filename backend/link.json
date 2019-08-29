@@ -1,0 +1,1 @@
+[{"from": "dept_emp", "to": "employees"}, {"from": "dept_emp", "to": "departments"}, {"from": "dept_manager", "to": "employees"}, {"from": "dept_manager", "to": "departments"}]
