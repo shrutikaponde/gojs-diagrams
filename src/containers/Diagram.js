@@ -1,10 +1,12 @@
 import React, { PureComponent } from "react";
 import { GojsDiagram } from "react-gojs";
-import createDiagram from "../helper/createDiagram";
 import "./diagram.css";
 
 export default class Diagram extends PureComponent {
 
+  constructor(props){
+    super(props)
+  }
   modelChangedhandler = () => {};
 
   updateDiagramProps = () => {};
@@ -12,9 +14,9 @@ export default class Diagram extends PureComponent {
     return (
       <React.Fragment>
         <GojsDiagram
-          diagramId="myDiagramDiv"
+          diagramId={this.props.id}
           model={this.props.model}
-          createDiagram={createDiagram}
+          createDiagram={this.props.createDiagram}
           className="diagram"
           onModelChange={this.modelChangedhandler}
           updateDiagramProps={this.updateDiagramProps}

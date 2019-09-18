@@ -5,6 +5,8 @@ const createDiagram = diagramId => {
   const $ = go.GraphObject.make;
 
   const myDiagram = $(go.Diagram, diagramId, {
+    initialViewportSpot: go.Spot.Center,
+    initialAutoScale: go.Diagram.Uniform,
     allowDelete: false,
     allowCopy: false,
     layout: $(go.ForceDirectedLayout),
